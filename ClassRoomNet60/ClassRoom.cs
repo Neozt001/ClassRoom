@@ -14,7 +14,25 @@ namespace ClassRoomNet60
 
         public ClassRoom()
         {
-            
+            StudentList = [];
         }
+
+        //Task 4
+        public override string ToString()
+        {
+            string str = "Class: " + ClassName + "\nStudents:\n";
+            foreach(Student s in StudentList)
+            {
+                str += "\tName: " + s.Name +
+                    ", Birth Day: " + s.BirthDay +
+                    ", Birth Month: " + s.BirthMonth + "\n";
+            }
+            if(StudentList.Count < 1)
+            {
+                str += "No students";
+            }
+            return str + "\nSemester start: " + SemesterStart;
+        }
+
     }
 }
