@@ -17,3 +17,6 @@ c1.StudentList.Add(s3);
 Console.WriteLine(c1);
 // Task 5
 Console.WriteLine(s3.Season());
+
+//Task 6
+c1.CountBirthDaySeasons();

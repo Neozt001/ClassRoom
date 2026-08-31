@@ -17,6 +17,40 @@ namespace ClassRoomNet60
             StudentList = [];
         }
 
+        //Task 6 
+        public void CountBirthDaySeasons()
+        {
+            int winterTotal = 0;
+            int springTotal = 0;
+            int summerTotal = 0;
+            int autumnTotal = 0;
+
+            foreach(Student s in StudentList)
+            {
+                if(s.BirthMonth == 12 || s.BirthMonth == 1 || s.BirthMonth == 2)
+                {
+                    winterTotal++;
+                }
+                if(s.BirthMonth == 3 || s.BirthMonth == 4 || s.BirthMonth == 5)
+                {
+                    springTotal++;
+                }
+                if(s.BirthMonth == 6 || s.BirthMonth == 7 || s.BirthMonth == 8)
+                {
+                    summerTotal++;
+                }
+                if(s.BirthMonth == 9 || s.BirthMonth == 10 || s.BirthMonth == 11)
+                {
+                    autumnTotal++;
+                }
+            }
+            Console.WriteLine("BirthDays in each season: " +
+                "\n\tWinter: " + winterTotal +
+                "\n\tSpring: " + springTotal +
+                "\n\tSummer: " + summerTotal +
+                "\n\tAutumn: " + autumnTotal);
+        }
+
         //Task 4
         public override string ToString()
         {
