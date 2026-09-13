@@ -17,6 +17,8 @@ namespace ClassRoomNet60
             Name = name;
             BirthMonth = birthMonth;
             BirthDay = birthDay;
+            if (birthMonth < 1 || birthMonth > 12)
+                throw new ArgumentOutOfRangeException(nameof(birthMonth), "Birth month must be between 1 and 12.");
         }
 
         // Task 5
